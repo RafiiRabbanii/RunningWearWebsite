@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogging</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    />
+
+    <!-- Feather Icons  -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- AlpineJS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- App  -->
+     <script src="src/app.js"></script>
+
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo"><span>Running Wear</span></a>
+
+      <div class="navbar-nav">
+        <a href="">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#perlengkapan">Perlengkapan</a>
+        <a href="#contact">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="shopping-cart-button">
+          <i data-feather="shopping-cart"></i>
+          <span class="quantity-badge"></span>
+        </a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+
+      <!-- Shopping Cart Start -->
+       <div class="shopping-cart">
+        <div class="cart-item">
+          <img src="img/perlengkapan/Nike Vaporfly 3.png" alt="Nike Vaporfly 3" class="">
+          <div class="item-detail">
+            <h3>Nike Vaporfly 3</h3>
+            <div class="item-price">IDR 999k</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/perlengkapan/Adidas Running Duramo.png" alt="Adidas Running Duramo.png" class="">
+          <div class="item-detail">
+            <h3>Adidas Running Duramo</h3>
+            <div class="item-price">IDR 900k</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+        <div class="cart-item">
+          <img src="img/perlengkapan/910 Nineten FUJI RCV Sepatu Lari.png" alt="910 Nineten FUJI RCV Sepatu Lari" class="">
+          <div class="item-detail">
+            <h3>910 Nineten FUJI RCV Sepatu Lari</h3>
+            <div class="item-price">IDR 479k</div>
+          </div>
+          <i data-feather="trash-2" class="remove-item"></i>
+        </div>
+       </div>
+      <!-- Shopping Cart End -->
+
+    </nav>
+
+    <!-- Navbar End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero" id="home">
+      <main class="content">
+        <a href="#perlengkapan" class="cta">Beli Sekarang</a>
+      </main>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- My JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+    <!-- About Section Start -->
+     <section id="about" class="about">
+      <h2>Kenapa <span>Running Wear<span></h2>
+          
+  
+      </div>
+      <div class="content">
+        <div class="feature">
+          <div class="icon1">
+              <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Brand Terpercaya</h3>
+          <p>Running Wear menghadirkan sepatu dari merek global yang diakui untuk kualitas dan performanya, memastikan Anda mendapatkan produk terbaik..</p>
+      </div>
+
+      <div class="feature">
+        <div class="icon2">
+            <i class="fas fa-shoe-prints"></i>
+        </div>
+        <h3>Kenyamanan Maksimal</h3>
+        <p>Setiap sepatu dipilih dengan cermat untuk memberikan teknologi dan bahan terbaik, mendukung kenyamanan dan performa maksimal di setiap langkah.</p>
+    </div>
+
+
+    <div class="feature">
+      <div class="icon3">
+          <i class="fas fa-tags"></i>
+      </div>
+      <h3>Penawaran Spesial</h3>
+      <p> Nikmati diskon menarik dan promosi eksklusif, membuat Anda bisa mendapatkan sepatu berkualitas tinggi dengan harga yang bersahabat.</p>
+  </div>
+
+  <div class="feature">
+      <div class="icon4">
+          <i class="fas fa-th-list"></i>
+      </div>
+      <h3>Beragam Pilihan</h3>
+      <p>Running Wear menawarkan koleksi lengkap dengan berbagai model, ukuran, dan fitur sesuai dengan kebutuhan lari Anda, baik untuk lari santai atau kompetisi.
+  </div>
+      </div>
+     </div>
+
+    </section>
+    <!-- About Section end -->
+
+
+    <!-- perlengkapan Section Start -->
+    <section class="perlengkapan" id="perlengkapan" x-data="perlengkapan">
+      <h2><span>Perlengkapan </span> Kami</h2>
+      <p>Sepatu jogging adalah salah satu perlengkapan terpenting bagi setiap pelari. Mengapa demikian? Sepatu yang tepat tidak hanya memberikan kenyamanan selama berlari, tetapi juga melindungi kaki dan tubuh dari cedera
+      </p>
+
+      <div class="row">
+          <template x-for="(item, index) in items" x-key="index">
+        <div class="perlengkapan-card">
+          <div class="perlengkapan-image">
+          <img :src= "`img/perlengkapan/${item.img}`" :alt="item.name">
+        </div>
+          <h3 x-text="item.name"></h3>
+          <div class="perlengkapan-card-price" x-text="rupiah(item.price)" ></div>
+          <div class="perlengkapan-icons">
+            <a href="#" @click.prevent="$store.cart.add(item)">
+              <i class="fas fa-shopping-cart"></i></a>
+        </div> 
+        </div>
+      </template>
+    </div>
+      </div>
+
+      <!--Tokoepdia  -->
+    <div class="tokopedia"><p>Kunjungi toko online kami</p>
+      <div class="tokopedia-icon">
+        <a href="https://www.tokopedia.com/sportstation0502" target="_blank">
+          <img src="img/tokopedia.svg" alt="Tokopedia">
+      </a>
+    
+      </div>
+      
+
+    <!--  Section end -->
+    
+    <!-- contact Section start -->
+<section id="contact" class="contact">
+  <h2><span>Kontak </span> Kami</h2>
+    <p>Kami siap membantu Anda! Jika ada pertanyaan, masukan, atau kebutuhan khusus terkait layanan kami, jangan ragu untuk menghubungi. Tim kami akan dengan senang hati memberikan respon terbaik untuk Anda.
+      </p>
+  <div class="row">
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.3433964295573!2d112.72725330000002!3d-7.315266599999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb7081be4f83%3A0xa9c00ebea3e64b3d!2sUniversitas%20Negeri%20Surabaya%20-%20Kampus%201!5e0!3m2!1sid!2sid!4v1728963937731!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+  
+
+  <form action="">
+    <div class="input-grup">
+      <i data-feather="user"></i>
+      <input type="text" placeholder="Nama" />
+    </div>
+    <div class="input-grup">
+      <i data-feather="mail"></i>
+      <input type="email" placeholder="Email" />
+    </div>
+    <div class="input-grup">
+      <i data-feather="phone"></i>
+      <input type="text" placeholder="No HP" />
+    </div>
+    <button type="submit" class="btn">Kirim Pesan</button>
+  </form>
+  
+
+</div>
+</section>
+    <!-- contact Section end -->
+
+    <!-- footer start-->
+
+    <footer>
+      <div class="socials">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+    
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#about">Tentang Kami</a>
+        <a href="#">perlengkapan</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    
+      <div class="credit">
+        <p>Created by <a href="#">RunningWear.</a> | &copy; 2024</p>
+      </div>
+    </footer>
+
+
+</footer>
+    <!-- footer end-->
+
+<!-- Feather Icons JavaScript -->
+<script>
+  feather.replace();
+</script>
+</body>
+</html>
+
+  
